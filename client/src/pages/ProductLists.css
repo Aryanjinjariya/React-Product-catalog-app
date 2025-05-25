@@ -1,0 +1,48 @@
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+
+  /* Default: Mobile (1 product per row) */
+  grid-template-columns: repeat(1, 1fr);
+}
+
+/* Tablet: 2 products per row */
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop/Desktop: 4 products per row */
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.filters input,
+.filters select {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.filters button {
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.filters button:hover {
+  background: #0056b3;
+}
